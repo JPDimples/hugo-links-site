@@ -24,26 +24,37 @@
     line-height: 1.5;
   }
   a { color: var(--ice); }
+  .banner img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    object-position: center 35%;
+    display: block;
+  }
   .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px 48px; }
   header {
-    display: flex;
-    gap: 24px;
-    align-items: center;
-    padding: 40px 0 8px;
-    flex-wrap: wrap;
+    text-align: center;
+    padding: 28px 0 8px;
   }
-  .hero-img {
-    width: 150px;
-    height: 200px;
+  h1 { font-size: 2.4rem; margin: 0 0 6px; line-height: 1.1; }
+  h1 span { color: var(--ice); }
+  .tagline { color: var(--muted); font-size: 1.1rem; margin: 0 auto; max-width: 480px; }
+  .mascots {
+    display: flex;
+    gap: 12px;
+    margin: 22px 0 0;
+    align-items: center;
+  }
+  .mascots img {
+    width: 72px;
+    height: 72px;
     object-fit: cover;
     object-position: top center;
-    border-radius: 18px;
-    border: 3px solid var(--ice-2);
+    border-radius: 12px;
+    border: 2px solid var(--ice-2);
     flex-shrink: 0;
   }
-  h1 { font-size: 2.2rem; margin: 0 0 6px; line-height: 1.1; }
-  h1 span { color: var(--ice); }
-  .tagline { color: var(--muted); font-size: 1.1rem; margin: 0; max-width: 420px; }
+  .mascots p { color: var(--muted); font-size: 0.95rem; margin: 0; }
   h2 {
     font-size: 0.85rem;
     text-transform: uppercase;
@@ -65,21 +76,11 @@
   .card b { display: block; font-size: 1.05rem; }
   .card span { color: var(--muted); font-size: 0.95rem; }
   .card .go { float: right; color: var(--ice-2); font-weight: 700; }
-  .mascots {
-    display: flex;
-    gap: 12px;
-    margin: 18px 0 0;
-    align-items: center;
+  .mini {
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin-top: 6px;
   }
-  .mascots img {
-    width: 64px;
-    height: 84px;
-    object-fit: cover;
-    object-position: top center;
-    border-radius: 12px;
-    border: 2px solid var(--ice-2);
-  }
-  .mascots p { color: var(--muted); font-size: 0.95rem; margin: 0; }
   .mini a { color: var(--muted); }
   footer {
     margin-top: 44px;
@@ -91,20 +92,23 @@
 </style>
 </head>
 <body>
+
+<div class="banner">
+  <img src="banner-hugo.png" alt="Hugo the yeti celebrating in a sunny park with balloons, confetti and a rainbow">
+</div>
+
 <div class="wrap">
 
   <header>
-    <img class="hero-img" src="hugo.webp" alt="Hugo the yeti">
-    <div>
-      <h1>Hugo's <span>Take</span></h1>
-      <p class="tagline">Men's health Shorts, gothic printables, and one deadpan yeti. Five new Shorts every day on YouTube.</p>
-    </div>
+    <h1>Hugo's <span>Take</span></h1>
+    <p class="tagline">Men's health Shorts, gothic printables, and one deadpan yeti. Five new Shorts every day on YouTube.</p>
   </header>
 
   <div class="mascots">
-    <img src="hugo.webp" alt="Hugo the yeti">
-    <img src="liam.webp" alt="Liam the sasquatch">
-    <p>Meet the mascots — Hugo, the deadpan yeti, and Liam, his younger orange sasquatch apprentice (Mondays on YouTube).</p>
+    <img src="hugo-playful.png" alt="Hugo the yeti laughing and giving a thumbs-up">
+    <img src="liam-playful.png" alt="Liam the orange sasquatch waving hello">
+    <img src="masie-playful.png" alt="Masie the gothic pin-up winking and holding a pink cupcake">
+    <p>Meet the mascots — Hugo, the deadpan yeti; Liam, his orange sasquatch apprentice; and Masie, the gothic pin-up of CoffinCutieCo.</p>
   </div>
 
   <h2>Watch</h2>
@@ -114,17 +118,17 @@
   </a>
   <a class="card" href="https://www.youtube.com/playlist?list=PLMHk2zQ2AzIU">
     <span class="go">&rarr;</span><b>Men's Health in 30 Seconds</b>
-    <span>The full Shorts playlist — every health tip in half a minute.</span>
+    <span>The full Shorts playlist — every Short in one playlist. Start here.</span>
   </a>
 
   <h2>Shop</h2>
   <a class="card" href="https://parnham.gumroad.com">
     <span class="go">&rarr;</span><b>CoffinCutieCo — Gothic Printables</b>
-    <span>Printable wall art, stickers and colouring pages on Gumroad.</span>
+    <span>Gothic printables, stickers &amp; posters from Coffin Cutie and the CoffinCutieCo shop.</span>
   </a>
   <a class="card" href="https://benable.com/JPDimples">
-    <span class="go">&rarr;</span><b>Benable — My Picks</b>
-    <span>The stuff I actually like, in one place.</span>
+    <span class="go">&rarr;</span><b>Benable — JPDimples</b>
+    <span>The products I actually recommend — gear, comfort, hobbies and more.</span>
   </a>
 
   <h2>Stremio addons</h2>
@@ -133,14 +137,6 @@
     <span>Hugo's deadpan verdict on every movie and show, right on the detail page.</span>
   </a>
   <p class="mini">Install link too: <a href="https://hugos-take.parnham78.workers.dev/manifest.json">hugos-take.parnham78.workers.dev/manifest.json</a></p>
-  <a class="card" href="stremio://raw.githubusercontent.com/JPDimples/stremio-kids-catalog/main/manifest.json">
-    <span class="go">&rarr;</span><b>Movies &amp; Shows for Nevaeh</b>
-    <span>Kid-safe catalogues only — G and PG movies, TV-Y to TV-PG shows.</span>
-  </a>
-  <a class="card" href="stremio://raw.githubusercontent.com/JPDimples/stremio-made-for-tammy/main/manifest.json">
-    <span class="go">&rarr;</span><b>Made for Tammy</b>
-    <span>Rom-coms, Hallmark, dramas and stand-up. No horror. Tammy's rules.</span>
-  </a>
 
   <h2>Follow</h2>
   <a class="card" href="https://www.instagram.com/johnengrish">
