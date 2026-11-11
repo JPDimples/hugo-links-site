@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hugo's Take — MrJparnham</title>
+<meta name="description" content="Hugo the yeti's home on the internet: men's health Shorts on YouTube, gothic printables on Gumroad, Benable picks, and Stremio addons.">
+<style>
+  :root {
+    --navy: #0b1626;
+    --navy-2: #12233c;
+    --ice: #a8d8f0;
+    --ice-2: #7cc4e8;
+    --text: #eef6fb;
+    --muted: #9db4c6;
+    --card: #16294a;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--navy);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+  }
+  a { color: var(--ice); }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px 48px; }
+  header {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    padding: 40px 0 8px;
+    flex-wrap: wrap;
+  }
+  .hero-img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 18px;
+    border: 3px solid var(--ice-2);
+    flex-shrink: 0;
+  }
+  h1 { font-size: 2.2rem; margin: 0 0 6px; line-height: 1.1; }
+  h1 span { color: var(--ice); }
+  .tagline { color: var(--muted); font-size: 1.1rem; margin: 0; max-width: 420px; }
+  h2 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--ice-2);
+    margin: 36px 0 12px;
+  }
+  .card {
+    display: block;
+    background: var(--card);
+    border: 1px solid #24405f;
+    border-radius: 14px;
+    padding: 16px 18px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: var(--text);
+  }
+  .card:hover { border-color: var(--ice-2); }
+  .card b { display: block; font-size: 1.05rem; }
+  .card span { color: var(--muted); font-size: 0.95rem; }
+  .card .go { float: right; color: var(--ice-2); font-weight: 700; }
+  .mascots {
+    display: flex;
+    gap: 12px;
+    margin: 18px 0 0;
+    align-items: center;
+  }
+  .mascots img {
+    width: 64px;
+    height: 84px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 12px;
+    border: 2px solid var(--ice-2);
+  }
+  .mascots p { color: var(--muted); font-size: 0.95rem; margin: 0; }
+  .mini a { color: var(--muted); }
+  footer {
+    margin-top: 44px;
+    padding-top: 20px;
+    border-top: 1px solid #24405f;
+    color: var(--muted);
+    font-size: 0.9rem;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <img class="hero-img" src="hugo.webp" alt="Hugo the yeti">
+    <div>
+      <h1>Hugo's <span>Take</span></h1>
+      <p class="tagline">Men's health Shorts, gothic printables, and one deadpan yeti. Five new Shorts every day on YouTube.</p>
+    </div>
+  </header>
+
+  <div class="mascots">
+    <img src="hugo.webp" alt="Hugo the yeti">
+    <img src="liam.webp" alt="Liam the sasquatch">
+    <p>Meet the mascots — Hugo, the deadpan yeti, and Liam, his younger orange sasquatch apprentice (Mondays on YouTube).</p>
+  </div>
+
+  <h2>Watch</h2>
+  <a class="card" href="https://www.youtube.com/@MrJparnham">
+    <span class="go">&rarr;</span><b>YouTube — @MrJparnham</b>
+    <span>Hugo Explains: men's health videos for men over 40, with Liam on Mondays.</span>
+  </a>
+  <a class="card" href="https://www.youtube.com/playlist?list=PLMHk2zQ2AzIU">
+    <span class="go">&rarr;</span><b>Men's Health in 30 Seconds</b>
+    <span>The full Shorts playlist — every health tip in half a minute.</span>
+  </a>
+
+  <h2>Shop</h2>
+  <a class="card" href="https://parnham.gumroad.com">
+    <span class="go">&rarr;</span><b>CoffinCutieCo — Gothic Printables</b>
+    <span>Printable wall art, stickers and colouring pages on Gumroad.</span>
+  </a>
+  <a class="card" href="https://benable.com/JPDimples">
+    <span class="go">&rarr;</span><b>Benable — My Picks</b>
+    <span>The stuff I actually like, in one place.</span>
+  </a>
+
+  <h2>Stremio addons</h2>
+  <a class="card" href="stremio://hugos-take.parnham78.workers.dev/manifest.json">
+    <span class="go">&rarr;</span><b>Hugo's Take</b>
+    <span>Hugo's deadpan verdict on every movie and show, right on the detail page.</span>
+  </a>
+  <p class="mini">Install link too: <a href="https://hugos-take.parnham78.workers.dev/manifest.json">hugos-take.parnham78.workers.dev/manifest.json</a></p>
+  <a class="card" href="stremio://raw.githubusercontent.com/JPDimples/stremio-kids-catalog/main/manifest.json">
+    <span class="go">&rarr;</span><b>Movies &amp; Shows for Nevaeh</b>
+    <span>Kid-safe catalogues only — G and PG movies, TV-Y to TV-PG shows.</span>
+  </a>
+  <a class="card" href="stremio://raw.githubusercontent.com/JPDimples/stremio-made-for-tammy/main/manifest.json">
+    <span class="go">&rarr;</span><b>Made for Tammy</b>
+    <span>Rom-coms, Hallmark, dramas and stand-up. No horror. Tammy's rules.</span>
+  </a>
+
+  <h2>Follow</h2>
+  <a class="card" href="https://www.instagram.com/johnengrish">
+    <span class="go">&rarr;</span><b>Instagram — @johnengrish</b>
+    <span>Daily Hugo Reels.</span>
+  </a>
+  <a class="card" href="https://www.threads.com/@johnengrish">
+    <span class="go">&rarr;</span><b>Threads — @johnengrish</b>
+    <span>Daily cross-posts and links.</span>
+  </a>
+  <a class="card" href="https://www.pinterest.com/johnparnham587/">
+    <span class="go">&rarr;</span><b>Pinterest — @johnparnham587</b>
+    <span>Hugo Explains boards, Benable picks and CoffinCutieCo.</span>
+  </a>
+
+  <footer>
+    <p>General information only, not medical advice. Talk to your doctor.</p>
+    <p>Built by Hugo. Obviously.</p>
+  </footer>
+
+</div>
+</body>
+</html>
