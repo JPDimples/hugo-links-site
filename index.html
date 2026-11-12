@@ -3,8 +3,80 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hugo's Take — MrJparnham</title>
-<meta name="description" content="Hugo the yeti's home on the internet: men's health Shorts on YouTube, gothic printables on Gumroad, Benable picks, and Stremio addons.">
+<!--
+  Hugo's Links, redesigned 2026-11-12 (local only, not deployed).
+  Design contract: one job, send a visitor from a Short, Reel or pin to
+  the right destination in one tap. Primary visitor is a man over 40
+  arriving from YouTube. Primary action is Watch on YouTube, first on
+  the page. One section per screen, one palette (navy and ice blue),
+  one signature detail (Hugo's portrait). No gradients, no glows, no
+  bento grid, no fake stats, no testimonials, no invented claims.
+  Previous version backed up at /tmp/hugo-links-index-v1.html and in
+  git history. Family Stremio addons stay off this page by John's choice.
+-->
+<title>Hugo's Links | Men's Health Shorts, Printables &amp; More</title>
+<meta name="description" content="Hugo's Links is one page with everything Hugo makes: men's health Shorts on YouTube, gothic printables on Gumroad, Benable picks and Hugo's Take on Stremio.">
+<meta property="og:title" content="Hugo's Links | Men's Health Shorts, Printables &amp; More">
+<meta property="og:description" content="Hugo's Links is one page with everything Hugo makes: men's health Shorts on YouTube, gothic printables on Gumroad, Benable picks and Hugo's Take on Stremio.">
+<meta property="og:image" content="https://hugo-links.pages.dev/banner-hugo.png">
+<meta property="og:url" content="https://hugo-links.pages.dev/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hugo's Links | Men's Health Shorts, Printables &amp; More">
+<meta name="twitter:description" content="Hugo's Links is one page with everything Hugo makes: men's health Shorts on YouTube, gothic printables on Gumroad, Benable picks and Hugo's Take on Stremio.">
+<meta name="twitter:image" content="https://hugo-links.pages.dev/banner-hugo.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Hugo's Links",
+      "url": "https://hugo-links.pages.dev/",
+      "sameAs": [
+        "https://www.youtube.com/@MrJparnham",
+        "https://www.instagram.com/johnengrish",
+        "https://www.threads.com/@johnengrish",
+        "https://www.pinterest.com/johnparnham587/"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "Hugo's Links",
+      "url": "https://hugo-links.pages.dev/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is Hugo's Links?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "One page with links to everything Hugo makes: YouTube Shorts, CoffinCutieCo printables, Benable picks and Hugo's Take on Stremio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Hugo's Take free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It installs free from the link on this page and adds Hugo's verdict to movie and show pages in Stremio."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are the Shorts medical advice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. They are general information only. Talk to your doctor about your own health."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
 <style>
   :root {
     --navy: #0b1626;
@@ -14,40 +86,95 @@
     --text: #eef6fb;
     --muted: #9db4c6;
     --card: #16294a;
+    --line: #24405f;
   }
   * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
   body {
     margin: 0;
     background: var(--navy);
     color: var(--text);
     font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    line-height: 1.5;
+    line-height: 1.55;
   }
   a { color: var(--ice); }
-  .banner img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    object-position: center 35%;
-    display: block;
+  a:focus-visible {
+    outline: 3px solid var(--ice);
+    outline-offset: 3px;
+    border-radius: 4px;
   }
+  .skip {
+    position: absolute;
+    left: 16px;
+    top: -48px;
+    background: var(--ice);
+    color: var(--navy);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    z-index: 10;
+  }
+  .skip:focus { top: 12px; }
   .wrap { max-width: 760px; margin: 0 auto; padding: 0 20px 48px; }
-  header {
+
+  /* Hero: portrait and words, stacked on a phone, side by side wider up. */
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 28px 0 8px;
+    gap: 20px;
+    padding: 32px 0 8px;
   }
-  h1 { font-size: 2.4rem; margin: 0 0 6px; line-height: 1.1; }
-  h1 span { color: var(--ice); }
-  .tagline { color: var(--muted); font-size: 1.1rem; margin: 0 auto; max-width: 480px; }
+  .hero img {
+    width: 168px;
+    height: 168px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 24px;
+    border: 2px solid var(--ice-2);
+    flex-shrink: 0;
+  }
+  .hero h1 { font-size: 2.4rem; margin: 0 0 8px; line-height: 1.1; }
+  .hero h1 span { color: var(--ice); }
+  .hero p { margin: 0 auto 20px; max-width: 480px; font-size: 1.1rem; color: var(--muted); }
+  .cta {
+    display: inline-block;
+    background: var(--ice);
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+    padding: 14px 26px;
+    border-radius: 12px;
+    min-height: 48px;
+  }
+  .cta:hover { background: var(--ice-2); }
+  .cta-secondary {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 0.95rem;
+  }
+  .answer {
+    margin: 28px 0 0;
+    padding: 16px 18px;
+    background: var(--navy-2);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    font-size: 1rem;
+  }
+  .answer p { margin: 0; }
+
+  /* Mascots: a small strip, not a second hero. */
   .mascots {
     display: flex;
     gap: 12px;
-    margin: 22px 0 0;
+    margin: 24px 0 0;
     align-items: center;
   }
   .mascots img {
-    width: 72px;
-    height: 72px;
+    width: 56px;
+    height: 56px;
     object-fit: cover;
     object-position: top center;
     border-radius: 12px;
@@ -55,105 +182,162 @@
     flex-shrink: 0;
   }
   .mascots p { color: var(--muted); font-size: 0.95rem; margin: 0; }
+
   h2 {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.14em;
     color: var(--ice-2);
-    margin: 36px 0 12px;
+    margin: 40px 0 12px;
   }
   .card {
     display: block;
     background: var(--card);
-    border: 1px solid #24405f;
+    border: 1px solid var(--line);
     border-radius: 14px;
     padding: 16px 18px;
     margin-bottom: 10px;
     text-decoration: none;
     color: var(--text);
+    min-height: 48px;
   }
   .card:hover { border-color: var(--ice-2); }
   .card b { display: block; font-size: 1.05rem; }
   .card span { color: var(--muted); font-size: 0.95rem; }
   .card .go { float: right; color: var(--ice-2); font-weight: 700; }
-  .mini {
-    font-size: 0.85rem;
-    color: var(--muted);
-    margin-top: 6px;
-  }
+  .card-primary { border: 2px solid var(--ice-2); }
+  .mini { font-size: 0.85rem; color: var(--muted); margin-top: 6px; }
   .mini a { color: var(--muted); }
+
+  .faq details {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 14px 18px;
+    margin-bottom: 10px;
+  }
+  .faq summary {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.02rem;
+  }
+  .faq p { color: var(--muted); margin: 8px 0 0; }
+
   footer {
     margin-top: 44px;
     padding-top: 20px;
-    border-top: 1px solid #24405f;
+    border-top: 1px solid var(--line);
     color: var(--muted);
     font-size: 0.9rem;
+  }
+  footer p { margin: 0 0 8px; }
+
+  @media (min-width: 640px) {
+    .hero {
+      flex-direction: row;
+      text-align: left;
+      align-items: center;
+      gap: 28px;
+      padding-top: 44px;
+    }
+    .hero img { width: 200px; height: 200px; }
+    .hero p { margin: 0 0 20px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
   }
 </style>
 </head>
 <body>
 
-<div class="banner">
-  <img src="banner-hugo.png" alt="Hugo the yeti celebrating in a sunny park with balloons, confetti and a rainbow">
-</div>
+<a class="skip" href="#main">Skip to links</a>
 
 <div class="wrap">
 
-  <header>
-    <h1>Hugo's <span>Take</span></h1>
-    <p class="tagline">Men's health Shorts, gothic printables, and one deadpan yeti. Five new Shorts every day on YouTube.</p>
+  <header class="hero">
+    <img src="hugo-playful.png" alt="Hugo the yeti laughing and giving a thumbs-up" width="1024" height="1024" fetchpriority="high">
+    <div>
+      <h1>Hugo's <span>Links</span></h1>
+      <p>Everything Hugo makes, in one place. Pick one below.</p>
+      <a class="cta" href="https://www.youtube.com/@MrJparnham">Watch on YouTube</a><br>
+      <a class="cta-secondary" href="https://www.youtube.com/playlist?list=PLMHk2zQ2AzIU">Or start with the Shorts playlist</a>
+    </div>
   </header>
 
-  <div class="mascots">
-    <img src="hugo-playful.png" alt="Hugo the yeti laughing and giving a thumbs-up">
-    <img src="liam-playful.png" alt="Liam the orange sasquatch waving hello">
-    <img src="masie-playful.png" alt="Masie the gothic pin-up winking and holding a pink cupcake">
-    <p>Meet the mascots — Hugo, the deadpan yeti; Liam, his orange sasquatch apprentice; and Masie, the gothic pin-up of CoffinCutieCo.</p>
-  </div>
+  <main id="main">
 
-  <h2>Watch</h2>
-  <a class="card" href="https://www.youtube.com/@MrJparnham">
-    <span class="go">&rarr;</span><b>YouTube — @MrJparnham</b>
-    <span>Hugo Explains: men's health videos for men over 40, with Liam on Mondays.</span>
-  </a>
-  <a class="card" href="https://www.youtube.com/playlist?list=PLMHk2zQ2AzIU">
-    <span class="go">&rarr;</span><b>Men's Health in 30 Seconds</b>
-    <span>The full Shorts playlist — every Short in one playlist. Start here.</span>
-  </a>
+    <div class="answer">
+      <p>Hugo's Links is one page with everything Hugo makes. Watch men's health Shorts on YouTube, buy gothic printables from CoffinCutieCo, see John's Benable picks, and get Hugo's Take on Stremio.</p>
+    </div>
 
-  <h2>Shop</h2>
-  <a class="card" href="https://parnham.gumroad.com">
-    <span class="go">&rarr;</span><b>CoffinCutieCo — Gothic Printables</b>
-    <span>Gothic printables, stickers &amp; posters from Coffin Cutie and the CoffinCutieCo shop.</span>
-  </a>
-  <a class="card" href="https://benable.com/JPDimples">
-    <span class="go">&rarr;</span><b>Benable — JPDimples</b>
-    <span>The products I actually recommend — gear, comfort, hobbies and more.</span>
-  </a>
+    <div class="mascots">
+      <img src="liam-playful.png" alt="Liam the orange sasquatch waving hello" width="1024" height="1024" loading="lazy" decoding="async">
+      <img src="masie-playful.png" alt="Masie the gothic pin-up winking and holding a pink cupcake" width="1024" height="1024" loading="lazy" decoding="async">
+      <p>Also here: Liam, Hugo's orange sasquatch apprentice, and Masie, the gothic pin-up of CoffinCutieCo.</p>
+    </div>
 
-  <h2>Stremio addons</h2>
-  <a class="card" href="stremio://hugos-take.parnham78.workers.dev/manifest.json">
-    <span class="go">&rarr;</span><b>Hugo's Take</b>
-    <span>Hugo's deadpan verdict on every movie and show, right on the detail page.</span>
-  </a>
-  <p class="mini">Install link too: <a href="https://hugos-take.parnham78.workers.dev/manifest.json">hugos-take.parnham78.workers.dev/manifest.json</a></p>
+    <h2>Watch</h2>
+    <a class="card card-primary" href="https://www.youtube.com/@MrJparnham">
+      <span class="go">&rarr;</span><b>YouTube: @MrJparnham</b>
+      <span>Five new Shorts every day. Men's health for men over 40, with Liam on Mondays.</span>
+    </a>
+    <a class="card" href="https://www.youtube.com/playlist?list=PLMHk2zQ2AzIU">
+      <span class="go">&rarr;</span><b>Men's Health in 30 Seconds</b>
+      <span>Every Short in one playlist. Start with the newest.</span>
+    </a>
 
-  <h2>Follow</h2>
-  <a class="card" href="https://www.instagram.com/johnengrish">
-    <span class="go">&rarr;</span><b>Instagram — @johnengrish</b>
-    <span>Daily Hugo Reels.</span>
-  </a>
-  <a class="card" href="https://www.threads.com/@johnengrish">
-    <span class="go">&rarr;</span><b>Threads — @johnengrish</b>
-    <span>Daily cross-posts and links.</span>
-  </a>
-  <a class="card" href="https://www.pinterest.com/johnparnham587/">
-    <span class="go">&rarr;</span><b>Pinterest — @johnparnham587</b>
-    <span>Hugo Explains boards, Benable picks and CoffinCutieCo.</span>
-  </a>
+    <h2>Shop</h2>
+    <a class="card" href="https://parnham.gumroad.com">
+      <span class="go">&rarr;</span><b>CoffinCutieCo: Gothic Printables</b>
+      <span>Gothic printables, stickers and posters. Prices in Canadian dollars.</span>
+    </a>
+    <a class="card" href="https://benable.com/JPDimples">
+      <span class="go">&rarr;</span><b>Benable: JPDimples</b>
+      <span>The products I actually recommend: gear, comfort, hobbies and more.</span>
+    </a>
+
+    <h2>Stremio addons</h2>
+    <a class="card" href="stremio://hugos-take.parnham78.workers.dev/manifest.json">
+      <span class="go">&rarr;</span><b>Hugo's Take</b>
+      <span>Hugo's deadpan verdict on every movie and show, right on the detail page. Free to install.</span>
+    </a>
+    <p class="mini">Install link too: <a href="https://hugos-take.parnham78.workers.dev/manifest.json">hugos-take.parnham78.workers.dev/manifest.json</a></p>
+
+    <h2>Follow</h2>
+    <a class="card" href="https://www.instagram.com/johnengrish">
+      <span class="go">&rarr;</span><b>Instagram: @johnengrish</b>
+      <span>Daily Hugo Reels.</span>
+    </a>
+    <a class="card" href="https://www.threads.com/@johnengrish">
+      <span class="go">&rarr;</span><b>Threads: @johnengrish</b>
+      <span>Daily cross-posts and links.</span>
+    </a>
+    <a class="card" href="https://www.pinterest.com/johnparnham587/">
+      <span class="go">&rarr;</span><b>Pinterest: @johnparnham587</b>
+      <span>Hugo Explains boards, Benable picks and CoffinCutieCo.</span>
+    </a>
+
+    <h2>Questions</h2>
+    <div class="faq">
+      <details>
+        <summary>What is Hugo's Links?</summary>
+        <p>One page with links to everything Hugo makes: YouTube Shorts, CoffinCutieCo printables, Benable picks and Hugo's Take on Stremio.</p>
+      </details>
+      <details>
+        <summary>Is Hugo's Take free?</summary>
+        <p>Yes. It installs free from the link on this page and adds Hugo's verdict to movie and show pages in Stremio.</p>
+      </details>
+      <details>
+        <summary>Are the Shorts medical advice?</summary>
+        <p>No. They are general information only. Talk to your doctor about your own health.</p>
+      </details>
+    </div>
+
+  </main>
 
   <footer>
     <p>General information only, not medical advice. Talk to your doctor.</p>
+    <p>Last updated 12 November 2026.</p>
     <p>Built by Hugo. Obviously.</p>
   </footer>
 

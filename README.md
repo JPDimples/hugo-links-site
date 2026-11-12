@@ -5,7 +5,7 @@ Cloudflare Pages at https://hugo-links.pages.dev
 
 - Watch: YouTube @MrJparnham and the Men's Health in 30 Seconds playlist
 - Shop: CoffinCutieCo on Gumroad, Benable picks
-- Stremio addons: Hugo's Take, Movies & Shows for Nevaeh, Made for Tammy
+- Stremio addons: Hugo's Take only (the two family addons are private and stay off the public site)
 - Follow: Instagram, Threads, Pinterest
 
 ## Deploy

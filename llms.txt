@@ -1,0 +1,23 @@
+# Hugo's Links
+
+> One page with everything Hugo makes: men's health Shorts on YouTube, gothic printables on Gumroad, Benable picks, and Hugo's Take on Stremio.
+
+## Watch
+
+- YouTube channel: https://www.youtube.com/@MrJparnham
+- Shorts playlist, Men's Health in 30 Seconds: https://www.youtube.com/playlist?list=PLMHk2zQ2AzIU
+
+## Shop
+
+- CoffinCutieCo on Gumroad (gothic printables, prices in Canadian dollars): https://parnham.gumroad.com
+- Benable picks: https://benable.com/JPDimples
+
+## Stremio
+
+- Hugo's Take (free, adds Hugo's verdict to movie and show pages): https://hugos-take.parnham78.workers.dev/manifest.json
+
+## Follow
+
+- Instagram: https://www.instagram.com/johnengrish
+- Threads: https://www.threads.com/@johnengrish
+- Pinterest: https://www.pinterest.com/johnparnham587/
